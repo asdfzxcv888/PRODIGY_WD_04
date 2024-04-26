@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Web Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add CSS styles for hidden sections */
+        .hidden {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        
+        
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#" onclick="toggleSection('hero')">Home</a></li>
+
+                <li><a href="#" onclick="toggleSection('about')">About Me</a></li>
+                <li><a href="#" onclick="toggleSection('projects')">Projects</a></li>
+                
+            </ul>
+          </nav>
+          
+          
+    </header>
+
+    <!-- Hero Section -->
+    <div id="my-name"><h1>My Name </h1></div>
+    <section class="hero" id="hero">
+        <h2>Passionate Web Developer Building Digital Experiences</h2>
+        <img src="https://img.freepik.com/free-photo/handsome-bearded-guy-posing-against-white-wall_273609-20597.jpg?size=626&ext=jpg&ga=GA1.1.553209589.1714089600&semt=sph" alt="Your Name">
+        <div class="skills">
+            <h3>Skills Summary</h3>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>React.js</li>
+                <!-- Add more skills as needed -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about hidden">
+        <h2>About Me</h2>
+        <p>I'm a passionate web developer with expertise in HTML, CSS, JavaScript, and more. Let's create something amazing together!</p>
+        <!-- Add your background, education, professional experience, skills, and personal interests -->
+        <div>National Institite of Technology Calicut-Ece</div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, fugiat culpa tempore asperiores maxime, eius, excepturi odit laudantium unde explicabo possimus vel repellat libero alias enim sed a soluta natus at voluptates nisi facere necessitatibus. Culpa omnis totam incidunt cum. Consequatur repellat ipsum nostrum aliquam minus itaque distinctio cupiditate placeat.</p>
+
+        <img src="https://storage-prtl-co.imgix.net/endor/articles/434/images/1663928047_shutterstock_2083362643.jpg?w=800&h=532&auto=format,compress&q=40"></img>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects hidden">
+        <h2>Projects</h2>
+        <div class="project">
+            <img src="https://blogassets.airtel.in/wp-content/uploads/2022/02/Fiber-net-VS-broadband.jpg" alt="Project 1">
+            <h3>Project 1</h3>
+            <p>A simple project shocasing my css skills thai i honed while making this.It features advanced css including animations and gradients.</p>
+            <a href="#">View Project</a>
+        </div>
+        <div class="project">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230420093202/Internet-image-(2).webp" alt="Project 1">
+            <h3>Project 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, nemo. Ab iste architecto possimus quod hic tempore, eaque sint inventore!</p>
+            <a href="#">View Project</a>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <!-- Contact Section -->
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 this is just a sample site. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript to toggle section visibility -->
+    <script>
+        function toggleSection(sectionId) {
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                if (section.id === sectionId) {
+                    if (section.classList.contains('hidden')) {
+                        section.classList.remove('hidden');
+                        setTimeout(() => {
+                            section.style.opacity = '1';
+                        }, 10);
+                    }
+                } else {
+                    if (!section.classList.contains('hidden')) {
+                        section.style.opacity = '0';
+                        setTimeout(() => {
+                            section.classList.add('hidden');
+                        }, 500); // Match the transition duration
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
